@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<body>
+<h1>Từ điển Việt Anh</h1>
+<input id="tra" type="text">
+<button onclick="kiemTra()">Tra cứu</button>
+<h1 id="ht"></h1>
+<script>
+    function kiemTra() {
+        let tra = document.getElementById('tra').value
+        let tanh = ['pen', 'book', 'note']
+        let tviet = ['bút', 'sách', 'vở']
+        for (let i = 0; i < tanh.length; i++) {
+            if (tanh[i] === tra) {
+                if (i != -1) {
+                    document.getElementById('ht').innerHTML = tviet[i]
+                    break
+                }
+            }else
+                document.getElementById('ht').innerHTML = 'khong co'
+        }
+    }
+</script>
+</body>
+</html>
